@@ -63,6 +63,7 @@ class Animal:
     def speak(self):
         print("This is an animal.")
 ```
+
 ### 2. **การสร้างออบเจ็กต์ (Object Creation)**
 การสร้างออบเจ็กต์ทำให้สามารถใช้งานคลาสที่ประกาศไว้ได้
 
@@ -85,8 +86,10 @@ animal.speak();
 animal = Animal("Buddy", 5)
 animal.speak()
 ```
+
 ### 3. **การห่อหุ้ม (Encapsulation)**
 การห่อหุ้มคือการปกป้องข้อมูลของคลาสจากการเข้าถึงโดยตรงจากภายนอก โดยการใช้ตัวกำหนดการเข้าถึง (access modifier)
+
 #### Java
 ```java
 class Animal {
@@ -131,4 +134,58 @@ class Animal:
 
     def set_name(self, name):
         self._name = name
+```
+
+### 4. **การสืบทอด (Inheritance)**
+การสืบทอดคือการสร้างคลาสใหม่ที่มีคุณสมบัติของคลาสเดิม
+
+#### Java
+```java
+class Dog extends Animal {
+    void speak() {
+        System.out.println("Bark!");
+    }
+}
+```
+#### C++
+```cpp
+class Dog : public Animal {
+public:
+    void speak() override {
+        std::cout << "Bark!" << std::endl;
+    }
+};
+```
+#### Python
+```python
+class Dog(Animal):
+    def speak(self):
+        print("Bark!")
+```
+
+#### 5. **การจัดการข้อยกเว้น (Exception Handling)**
+ทุกภาษามีโครงสร้างที่คล้ายกันในการจัดการข้อยกเว้น (exception) เพื่อป้องกันการทำงานที่ไม่ถูกต้อง
+
+#### Java
+```java
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero.");
+}
+```
+#### C++
+```cpp
+try {
+    int result = 10 / 0;
+} catch (const std::exception& e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+}
+```
+#### Python
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print("Cannot divide by zero:", e)
 ```
