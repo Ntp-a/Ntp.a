@@ -26,3 +26,17 @@
 4. **Inheritance**: ทุกภาษาสามารถสืบทอดคลาสได้ แต่ Java ไม่รองรับ Multiple Inheritance แบบตรงๆ (ต้องใช้ Interface)
 5. **Memory Management**: Java และ Python มีระบบ garbage collection ในขณะที่ C++ ต้องจัดการหน่วยความจำเอง
 6. **Exception Handling**: การจัดการข้อผิดพลาดคล้ายกันในทั้งสามภาษา แต่มีความแตกต่างในรูปแบบการเขียน
+
+### 1. **การประกาศคลาส (Class Declaration)**
+การประกาศคลาสเป็นหัวใจหลักของ OOP ซึ่งทำหน้าที่กำหนดโครงสร้างของวัตถุ (object) และพฤติกรรม (method)
+
+#### Java
+```java
+class Animal {
+    String name;
+    int age;
+    
+    void speak() {
+        System.out.println("This is an animal.");
+    }
+}
