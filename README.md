@@ -40,3 +40,95 @@ class Animal {
         System.out.println("This is an animal.");
     }
 }
+```
+#### C++
+```cpp
+class Animal {
+public:
+    std::string name;
+    int age;
+
+    void speak() {
+        std::cout << "This is an animal." << std::endl;
+    }
+};
+```
+#### Python
+```python
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        print("This is an animal.")
+```
+### 2. **การสร้างออบเจ็กต์ (Object Creation)**
+การสร้างออบเจ็กต์ทำให้สามารถใช้งานคลาสที่ประกาศไว้ได้
+
+#### Java
+```java
+Animal animal = new Animal();
+animal.name = "Buddy";
+animal.age = 5;
+animal.speak();
+```
+#### C++
+```cpp
+Animal animal;
+animal.name = "Buddy";
+animal.age = 5;
+animal.speak();
+```
+#### Python
+```python
+animal = Animal("Buddy", 5)
+animal.speak()
+```
+### 3. **การห่อหุ้ม (Encapsulation)**
+การห่อหุ้มคือการปกป้องข้อมูลของคลาสจากการเข้าถึงโดยตรงจากภายนอก โดยการใช้ตัวกำหนดการเข้าถึง (access modifier)
+#### Java
+```java
+class Animal {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+#### C++
+```cpp
+class Animal {
+private:
+    std::string name;
+    int age;
+
+public:
+    void setName(std::string name) {
+        this->name = name;
+    }
+
+    std::string getName() {
+        return name;
+    }
+};
+```
+#### Python
+```python
+class Animal:
+    def __init__(self, name, age):
+        self._name = name  # ใช้ underscore (_) แทนการใช้ private
+        self._age = age
+
+    def get_name(self):
+        return self._name
+
+    def set_name(self, name):
+        self._name = name
+```
