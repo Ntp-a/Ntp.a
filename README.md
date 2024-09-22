@@ -1,5 +1,7 @@
 # OOP Comparison: Java, C++, and Python
 
+เปรียบเทียบความเหมือนและความแตกต่างในการเขียนโปรแกรมแบบ OOP ด้วยภาษา Java, C++, Python
+
 # OOP Comparison Table: Java, C++, and Python
 
 | **Features**           | **Java**                                              | **C++**                                               | **Python**                                             |
